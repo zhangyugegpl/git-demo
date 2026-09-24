@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="章鱼哥的个人简历">
+  <title>章鱼哥 | 个人简历</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #667085;
+      --line: #e6eaf0;
+      --primary: #315efb;
+      --soft: #f5f7ff;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #eef2f7;
+      font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+      line-height: 1.7;
+    }
+
+    .page {
+      width: min(100% - 32px, 980px);
+      margin: 40px auto;
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: 0 20px 60px rgba(25, 45, 90, 0.12);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 48px 56px 40px;
+      color: white;
+      background: linear-gradient(120deg, #172554, #315efb);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: #bfdbfe;
+      font-size: 14px;
+      letter-spacing: 0.16em;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 6vw, 56px);
+      line-height: 1.15;
+    }
+
+    .role {
+      margin: 12px 0 0;
+      color: #dbeafe;
+      font-size: 18px;
+    }
+
+    .avatar {
+      flex: 0 0 auto;
+      width: 112px;
+      height: 112px;
+      display: grid;
+      place-items: center;
+      border: 4px solid rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      color: #1e3a8a;
+      font-size: 42px;
+      font-weight: 700;
+      background: #dbeafe;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 48px;
+      padding: 44px 56px 56px;
+    }
+
+    section + section { margin-top: 34px; }
+
+    h2 {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 18px;
+      font-size: 20px;
+    }
+
+    h2::before {
+      width: 5px;
+      height: 22px;
+      content: "";
+      border-radius: 4px;
+      background: var(--primary);
+    }
+
+    p { margin: 0; color: var(--muted); }
+
+    .item {
+      position: relative;
+      padding-left: 22px;
+      border-left: 2px solid var(--line);
+    }
+
+    .item + .item { margin-top: 24px; }
+
+    .item::before {
+      position: absolute;
+      top: 5px;
+      left: -7px;
+      width: 10px;
+      height: 10px;
+      content: "";
+      border: 2px solid var(--primary);
+      border-radius: 50%;
+      background: var(--white);
+    }
+
+    .item-title {
+      margin: 0 0 4px;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .meta {
+      margin-bottom: 8px;
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      padding: 6px 11px;
+      color: #2746ae;
+      font-size: 13px;
+      background: var(--soft);
+      border-radius: 6px;
+    }
+
+    .contact {
+      display: grid;
+      gap: 12px;
+      padding: 20px;
+      background: var(--soft);
+      border-radius: 12px;
+    }
+
+    .contact a {
+      color: var(--primary);
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .contact a:hover { text-decoration: underline; }
+
+    .note {
+      margin-top: 22px;
+      padding: 14px 16px;
+      color: #475467;
+      font-size: 13px;
+      background: #fffbeb;
+      border-left: 3px solid #f59e0b;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 28px;
+      color: var(--primary);
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .back:hover { text-decoration: underline; }
+
+    @media (max-width: 700px) {
+      .page { width: min(100% - 20px, 980px); margin: 10px auto; }
+      header, .content { padding-left: 28px; padding-right: 28px; }
+      header { align-items: flex-start; flex-direction: column-reverse; }
+      .content { display: block; }
+      .content aside { margin-top: 34px; }
+    }
+
+    @media print {
+      body { background: white; }
+      .page { width: 100%; margin: 0; box-shadow: none; }
+      .back { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div>
+        <p class="eyebrow">PERSONAL RESUME</p>
+        <h1>章鱼哥</h1>
+        <p class="role">前端开发者 · 设计爱好者</p>
+      </div>
+      <div class="avatar" aria-label="章鱼哥头像">章</div>
+    </header>
+
+    <div class="content">
+      <div>
+        <section>
+          <h2>个人简介</h2>
+          <p>
+            热爱创造与分享的前端开发者，关注网页的可用性、视觉表现和细节体验。
+            擅长将想法转化为结构清晰、响应迅速、易于维护的网页产品。
+          </p>
+        </section>
+
+        <section>
+          <h2>项目经历</h2>
+          <article class="item">
+            <h3 class="item-title">个人介绍与简历网站</h3>
+            <p class="meta">独立项目 · 2026</p>
+            <p>从页面结构、视觉样式到响应式适配独立完成，使用 Git 管理项目版本，并通过语义化 HTML 提升页面可访问性。</p>
+          </article>
+          <article class="item">
+            <h3 class="item-title">持续学习与实践</h3>
+            <p class="meta">个人成长 · 持续进行中</p>
+            <p>持续探索现代前端技术、交互设计与开发工作流，重视把新知识转化为可复用的实际成果。</p>
+          </article>
+        </section>
+
+        <section>
+          <h2>核心技能</h2>
+          <div class="tags">
+            <span class="tag">HTML5 / CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">响应式设计</span>
+            <span class="tag">用户体验</span>
+            <span class="tag">Git 版本管理</span>
+            <span class="tag">页面性能优化</span>
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <section>
+          <h2>联系方式</h2>
+          <div class="contact">
+            <span>📧 <a href="mailto:zhanghx970311@gmail.com">zhanghx970311@gmail.com</a></span>
+            <span>💻 <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub 主页</a></span>
+            <span>📍 中国</span>
+          </div>
+        </section>
+
+        <section>
+          <h2>个人特质</h2>
+          <div class="tags">
+            <span class="tag">主动学习</span>
+            <span class="tag">注重细节</span>
+            <span class="tag">善于沟通</span>
+            <span class="tag">结果导向</span>
+          </div>
+        </section>
+
+        <p class="note">提示：工作经历、教育背景和真实项目数据可根据实际情况补充替换。</p>
+        <a class="back" href="index.html">← 返回个人介绍页</a>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
